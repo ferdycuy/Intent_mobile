@@ -227,6 +227,7 @@ b. Project Count = **CountActivity.java**
 c. Project Sianida = **SianidaActivity.java**
 d. Project Pesan Activity = **PesanActivity.java** dan **Pesan2Activity.java**
 e. Project Set Alarm = **MainActivity.java** (karena implicit intent, jadi sourc code untuk set alarm dibuat langsung disini)
+
 ```
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
