@@ -12,4 +12,4 @@
 Pertama, kita akan membuat Launcher Splash Logo, atau menampilkan logo saat kita pertama kali membuka aplikasi.<br>
 caranya : <br>
 - Membuat sebuah Drawable Resource File baru, untuk background logo launcher kita nanti. Buat file baru pada directory res/drawable
-- Klik kanan drawable>new>new resource file>buat nama fle>ok.
+> Klik kanan drawable>new>new resource file>buat nama fle>ok.
