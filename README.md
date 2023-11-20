@@ -16,7 +16,8 @@ caranya : <br>
 - Setelah file berhasil dibuat, kita tambahkan terlebih dahulu logo yang kita miliki ke dalam project kita.
 > copy logonya>lalu paste di folder drawable tadi.
 - Lanjut membuka backgroundlauncher.xml yang sudah kita buat tadi, dan masukan code ini :
-  `<?xml version="1.0" encoding="utf-8"?>
+  ```
+  <?xml version="1.0" encoding="utf-8"?>
 <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
     <item android:drawable="@color/grey"/>
     <item>
@@ -25,16 +26,19 @@ caranya : <br>
             android:gravity="center" />
     </item>
 </layer-list>
-`
+```
 - Lanjut, buka themes.xml yang letaknya ada di res>values>themes, dan tambahkan code ini didalam resourcesnya :
-  `  <style name="SplashScreen" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+  ```
+  <style name="SplashScreen" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <item name="android:windowBackground">@drawable/backgroundlauncher</item>
         <item name="android:statusBarColor">?attr/colorOnPrimary</item>
-  </style> `
+  </style> 
+  ```
 - Lanjut, kita buat java class nya, supaya splashscreen bisa berjalan.
   > Klik File Java>klik kanan com.example yang paling atas>new>java class>buat nama file>enter.<br>
   didalam SplashScreen.java , kita buat codenya, seperti ini :
-  ` package com.example.tugassembilan;
+  ```
+ package com.example.tugassembilan;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -55,5 +59,6 @@ public class SplashScreen extends AppCompatActivity {
             }
         }, 2500);
     }
-}`
+}
+```
 - Lanjut, Buka AndroidManifest.xml dan tambahkan code berikut didalam `<application>` :
