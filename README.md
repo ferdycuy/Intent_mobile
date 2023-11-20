@@ -819,7 +819,7 @@ public class Pesan2Activity extends AppCompatActivity {
 ```
 <uses-permission android:name="com.android.alarm.permission.SET_ALARM" />
 ```
-Tambahkan code berikut didalam `<application` agar set alarm dapat berjalan:
+Tambahkan code berikut didalam `<application>` agar set alarm dapat berjalan:
 ```
     <activity
         android:name=".MainActivity"
@@ -830,6 +830,74 @@ Tambahkan code berikut didalam `<application` agar set alarm dapat berjalan:
         </intent-filter>
     </activity>
 ```
+## Colors, String, Dimens
+- Colors
+> Terdapat semua warna dari project
+
+```
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="grey">#5E5A5A</color>
+    <color name="blue">#0004FF</color>
+    <color name="green">#6CF388</color>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#DA883F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="hijautua">#0F500D</color>
+</resources>
+```
+> **NOTE**: Bisa diubah warnanya sesuai selera teman-teman
+
+- Strings
+> Terdapat semua string dari project
+
+```
+<resources>
+    <string name="app_name">Tugas Sembilan</string>
+
+    <string name="project_hello">Project Hello World</string>
+    <string name="project_count">Project Count</string>
+    <string name="project_sianida">Project Sianida</string>
+    <string name="project_pesanactivity">Project Pesan Activity</string>
+    <string name="project_set_alarm">Project Set Alarm</string>
+
+    <string name="hello_text">Hello World!</string>
+
+    <string name="button_label_toast">Desk</string>
+    <string name="button_label_count">Count</string>
+    <string name="count_initial_value">0</string>
+    <string name="toast_message">Project Count</string>
+
+    <string name="button_main">Send</string>
+    <string name="text_header_reply">Message Received</string>
+    <string name="editText_main">Enter Your Message Here</string>
+    <string name="text_header">Reply Received</string>
+    <string name="button_second">Reply</string>
+    <string name="editText_second">Enter Your Reply Here</string>
+
+    <string name="article_title">Kasus Sianida</string>
+    <string name="article_subtitle">ICE COLD!</string>
+
+    <string name="article_teks">
+    In a vault deep inside Abbey Road Studios in London — protected by an unmarked, triple-locked, police-alarmed door — are something like 400 hours of unreleased Beatles recordings, starting from June 2, 1962 and ending with the very last tracks recorded for the Let It Be album. The best of the best were released by Apple Records in the form of the 3-volume Anthology series. For more information, see the Beatles Time Capsule at www.rockument.com. \n\n This volume starts with the first new Beatle song, “Free as a Bird” (based on a John Lennon demo, found only on The Lost Lennon Tapes Vol. 28, and covers the very earliest historical recordings, outtakes from the first albums, and live recordings from early concerts and BBC Radio sessions. \n\n
+    </string>
+</resources>
+```
+> **NOTE**: Teks Artikel nya saya ambil sedikit biar menghemat tempat
+
+- Dimens
+> Code dimens untuk project sianida
+
+```
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="padding_regular">10dp</dimen>
+    <dimen name="line_spacing">5sp</dimen>
+</resources>
+```
+
 ## FINISH
 Alhamdulillah telah seslasai :)<br>
 TERIMA KASIH
