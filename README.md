@@ -160,7 +160,7 @@ Sudah oke, perintah membuat Launcher Splash Logo sudah selesai, lanjut ke tahap 
 </RelativeLayout>
 ```
 > **NOTE:** Background nya sesuaikan dengan keinginan kalian ya, dan ini aku memanggil nama fileku yaitu background `android:src="@drawable/background" ` nama file gambarnya sesuaikan dengan yang kalian buat yaa, caranya sama tinggal copy>paste di folder drawable.<br>
-TAMPILAN DESAIN
+TAMPILAN DESAIN<br>
 ![desain menu mobile](https://github.com/ferdycuy/Intent_mobile/assets/115714443/1a51527d-5a46-4d29-ab43-c773a852d518)
 
 - Lanjut, kita buka **MainActivity.java** untuk menambahkan code intent untuk masing-masing tombol.
