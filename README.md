@@ -5,7 +5,7 @@
   Kelas   : TI.22.A.1</br>
   Dosen   : Donny Maulana, S.Kom., M.M.S.I.</br>
 
- ## Tugas
+ ## Tugas 
   ![tugas 9 mobile](https://github.com/ferdycuy/Intent_mobile/assets/115714443/e1316f9f-b39e-41af-aa31-ea4408dd100d)
 
  ## 1.Launcher Splash Logo
@@ -27,6 +27,7 @@ caranya : <br>
     </item>
 </layer-list>
 ```
+
 - Lanjut, buka themes.xml yang letaknya ada di res>values>themes, dan tambahkan code ini didalam resourcesnya :
   ```
   <style name="SplashScreen" parent="Theme.MaterialComponents.DayNight.NoActionBar">
@@ -34,6 +35,8 @@ caranya : <br>
         <item name="android:statusBarColor">?attr/colorOnPrimary</item>
   </style> 
   ```
+
+
 - Lanjut, kita buat java class nya, supaya splashscreen bisa berjalan.
   > Klik File Java>klik kanan com.example yang paling atas>new>java class>buat nama file>enter.<br>
   didalam SplashScreen.java , kita buat codenya, seperti ini :
