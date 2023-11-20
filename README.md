@@ -523,8 +523,7 @@ public class CountActivity extends AppCompatActivity {
 </RelativeLayout>
 ```
 - SianidaActivity.java
-
-  ```
+```
   package com.example.tugassembilan;
 
 import android.os.Bundle;
@@ -614,7 +613,7 @@ public class SianidaActivity extends AppCompatActivity {
 </androidx.constraintlayout.widget.ConstraintLayout>
 ```
 - activity_pesan2.xml
-
+- 
 ```
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout
