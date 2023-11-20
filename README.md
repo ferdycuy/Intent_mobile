@@ -23,9 +23,10 @@ caranya : <br>
     <item android:drawable="@color/grey"/>
     <item>
         <bitmap
-            android:src="@drawable/logo"
+            android:src="@drawable/bg_kp"
             android:gravity="center" />
     </item>
+
 </layer-list>
 ```
 
@@ -99,62 +100,198 @@ Sudah oke, perintah membuat Launcher Splash Logo sudah selesai, lanjut ke tahap 
         android:layout_height="match_parent"
         android:adjustViewBounds="true"
         android:scaleType="centerCrop"
-        android:src="@drawable/background" />
+        android:src="@drawable/bg_mainbutterfly" />
 
     <Button
         android:id="@+id/btnHelloWorld"
-        android:layout_width="wrap_content"
+        android:layout_width="190dp"
         android:layout_height="wrap_content"
-        android:onClick="btnHelloWorld"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="200dp"
+        android:onClick="btnHelloWorld"
         android:text="@string/project_hello"
         tools:ignore="UsingOnClickInXml" />
 
     <Button
         android:id="@+id/btnProjectCount"
-        android:layout_width="wrap_content"
+        android:layout_width="190dp"
         android:layout_height="wrap_content"
-        android:onClick="btnCount"
         android:layout_below="@+id/btnHelloWorld"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"
+        android:onClick="btnCount"
         android:text="@string/project_count"
         tools:ignore="UsingOnClickInXml" />
 
     <Button
         android:id="@+id/btnProjectSianida"
-        android:layout_width="wrap_content"
+        android:layout_width="190dp"
         android:layout_height="wrap_content"
-        android:onClick="btnSianida"
         android:layout_below="@+id/btnProjectCount"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"
+        android:onClick="btnSianida"
         android:text="@string/project_sianida"
         tools:ignore="UsingOnClickInXml" />
 
     <Button
-        android:id="@+id/btnTwoActivity"
-        android:layout_width="wrap_content"
+        android:id="@+id/btnPesanActivity"
+        android:layout_width="190dp"
         android:layout_height="wrap_content"
-        android:onClick="btnTwoActivity"
         android:layout_below="@+id/btnProjectSianida"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"
-        android:text="@string/project_twoactivity"
+        android:layout_marginTop="21dp"
+        android:onClick="btnTwoActivity"
+        android:text="@string/project_pesanactivity"
         tools:ignore="UsingOnClickInXml" />
 
     <Button
         android:id="@+id/btnSetAlarm"
-        android:layout_width="wrap_content"
+        android:layout_width="190dp"
         android:layout_height="wrap_content"
-        android:onClick="btnSetAlarm"
-        android:layout_below="@+id/btnTwoActivity"
+        android:layout_below="@+id/btnPesanActivity"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"
+        android:onClick="btnSetAlarm"
         android:text="@string/project_set_alarm"
         tools:ignore="UsingOnClickInXml" />
 
 </RelativeLayout>
 ```
-> **NOTE:** Background nya sesuaikan dengan keinginan kalian ya, dan ini aku memanggil nama fileku yaitu background `android:src="@drawable/background" ` nama file gambarnya sesuaikan dengan yang kalian buat yaa
+> **NOTE:** Background nya sesuaikan dengan keinginan kalian ya, dan ini aku memanggil nama fileku yaitu background `android:src="@drawable/background" ` nama file gambarnya sesuaikan dengan yang kalian buat yaa, caranya sama tinggal copy>paste di folder drawable.<br>
+TAMPILAN DESAIN
+![desain menu mobile](https://github.com/ferdycuy/Intent_mobile/assets/115714443/1a51527d-5a46-4d29-ab43-c773a852d518)
+
+- Lanjut, kita buka **MainActivity.java** untuk menambahkan code intent untuk masing-masing tombol.
+
+  ```
+  package com.example.tugassembilan;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.View;
+
+public class MainActivity extends AppCompatActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        findViewById(R.id.btnSetAlarm).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Panggil metode untuk mengatur alarm
+                setAlarm();
+            }
+        });
+    }
+    private void setAlarm() {
+        Intent alarm = new Intent(android.provider.AlarmClock.ACTION_SET_ALARM);
+        startActivity(alarm);
+    }
+
+    public void btnHelloWorld(View view) {
+        Intent helloworld = new Intent(MainActivity.this, HelloActivity.class);
+        startActivity(helloworld);
+    }
+
+    public void btnCount(View view) {
+        Intent count = new Intent(MainActivity.this, CountActivity.class);
+        startActivity(count);
+    }
+
+    public void btnSianida(View view) {
+        Intent sianida = new Intent(MainActivity.this, SianidaActivity.class);
+        startActivity(sianida);
+    }
+
+    public void btnTwoActivity(View view) {
+        Intent twoact = new Intent(MainActivity.this, PesanActivity.class);
+        startActivity(twoact);
+    }
+}
+```
+> Dari semua button a - d menggunakan explicit intent, sedangkan button e. (Project Set Alarm) menggunakan implicit intent.
+
+Menu Halaman Utama Sudah Selesai dibuat, lanjutt
+
+# 3. AndroidManifest.xml
+Didalam **AndroidManifest.xml** ini kita tambahkan semua .java dari semua project kita sebelumnya. Berikut nama .java dari berbagai project yang telah saya buat:
+
+a. Project Hello World = **HelloActivity.java**
+b. Project Count = **CountActivity.java**
+c. Project Sianida = **SianidaActivity.java**
+d. Project Pesan Activity = **PesanActivity.java** dan **Pesan2Activity.java**
+e. Project Set Alarm = **MainActivity.java** (karena implicit intent, jadi sourc code untuk set alarm dibuat langsung disini)
+```
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission
+        android:name="com.android.alarm.permission.SET_ALARM" />
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Tugassembilan"
+        tools:targetApi="31">
+
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.SET_ALARM" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".HelloActivity"
+            android:exported="true" />
+
+        <activity
+            android:name=".PesanActivity"
+            android:exported="true" />
+
+        <activity
+            android:name=".Pesan2Activity"
+            android:exported="true" />
+
+        <activity
+            android:name=".CountActivity"
+            android:exported="true" />
+
+        <activity
+            android:name=".SianidaActivity"
+            android:exported="true" />
+
+        <activity
+            android:name=".SplashScreen"
+            android:exported="true"
+            android:theme="@style/SplashScreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
+```
+# HASIL RUN
+Berikut Video Runnya :
+
+https://github.com/ferdycuy/Intent_mobile/assets/115714443/9a54d15d-ee61-4c4a-af8b-22f87ad16d88
+
+
+  
+
+
