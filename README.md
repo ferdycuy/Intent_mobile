@@ -32,7 +32,8 @@ caranya : <br>
 
 - Lanjut, buka **themes.xml** yang letaknya ada di res>values>themes, dan tambahkan code ini didalam resourcesnya :
 
- ``` <style name="SplashScreen" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+ ```
+<style name="SplashScreen" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <item name="android:windowBackground">@drawable/backgroundlauncher</item>
         <item name="android:statusBarColor">?attr/colorOnPrimary</item>
   </style> 
