@@ -164,9 +164,8 @@ TAMPILAN DESAIN<br>
 ![desain menu mobile](https://github.com/ferdycuy/Intent_mobile/assets/115714443/1a51527d-5a46-4d29-ab43-c773a852d518)
 
 - Lanjut, kita buka **MainActivity.java** untuk menambahkan code intent untuk masing-masing tombol.
-
-  ```
-  package com.example.tugassembilan;
+```
+package com.example.tugassembilan;
 
 import androidx.appcompat.app.AppCompatActivity;
 
