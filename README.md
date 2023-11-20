@@ -17,7 +17,8 @@ caranya : <br>
 > copy logonya>lalu paste di folder drawable tadi.
 - Lanjut membuka backgroundlauncher.xml yang sudah kita buat tadi, dan masukan code ini :
 
-  ```<?xml version="1.0" encoding="utf-8"?>
+```
+<?xml version="1.0" encoding="utf-8"?>
 <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
     <item android:drawable="@color/grey"/>
     <item>
