@@ -221,11 +221,11 @@ Menu Halaman Utama Sudah Selesai dibuat, lanjutt
 # 3. AndroidManifest.xml
 Didalam **AndroidManifest.xml** ini kita tambahkan semua .java dari semua project kita sebelumnya. Berikut nama .java dari berbagai project yang telah saya buat:
 
-a. Project Hello World = **HelloActivity.java**
-b. Project Count = **CountActivity.java**
-c. Project Sianida = **SianidaActivity.java**
-d. Project Pesan Activity = **PesanActivity.java** dan **Pesan2Activity.java**
-e. Project Set Alarm = **MainActivity.java** (karena implicit intent, jadi sourc code untuk set alarm dibuat langsung disini)
+a. Project Hello World = **HelloActivity.java**<br>
+b. Project Count = **CountActivity.java**<br>
+c. Project Sianida = **SianidaActivity.java**<br>
+d. Project Pesan Activity = **PesanActivity.java** dan **Pesan2Activity.java**<br>
+e. Project Set Alarm = **MainActivity.java** (karena implicit intent, jadi sourc code untuk set alarm dibuat langsung disini)<br>
 
 ```
 <?xml version="1.0" encoding="utf-8"?>
