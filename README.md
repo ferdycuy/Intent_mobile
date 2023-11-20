@@ -899,7 +899,7 @@ Tambahkan code berikut didalam `<application>` agar set alarm dapat berjalan:
 ```
 
 ## FINISH
-Alhamdulillah telah seslasai :)<br>
+Alhamdulillah telah selesai :)<br>
 TERIMA KASIH
 
 
