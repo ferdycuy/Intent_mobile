@@ -538,7 +538,7 @@ public class SianidaActivity extends AppCompatActivity {
     }
 }
 ```
-# D. PROJECT PESAN ACTIVITY
+## D. PROJECT PESAN ACTIVITY
 - activity_pesan.xml
 
 ```
@@ -613,7 +613,7 @@ public class SianidaActivity extends AppCompatActivity {
 </androidx.constraintlayout.widget.ConstraintLayout>
 ```
 - activity_pesan2.xml
-- 
+  
 ```
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout
@@ -786,6 +786,53 @@ public class Pesan2Activity extends AppCompatActivity {
     }
 }
 ```
+## E. PROJECT SET ALARM
+- Kita buat buttonnya terlebih dahulu didalam sebuah activity.xml, kita buat di **activity_main.xml**, bersama dengan tombol lainnya.
+```
+<Button
+      android:id="@+id/btnSetAlarm"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:onClick="btnSetAlarm"
+      android:layout_below="@+id/btnTwoActivity"
+      android:layout_centerHorizontal="true"
+      android:layout_marginTop="20dp"
+      android:text="@string/project_set_alarm"
+      tools:ignore="UsingOnClickInXml" />
+```
+- lalu tambahkan code implicit intent di **MainActivity.java nya**.
+```
+            findViewById(R.id.btnSetAlarm).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Panggil metode untuk mengatur alarm
+                setAlarm();
+            }
+        });
+    }
+    private void setAlarm() {
+    Intent alarm = new Intent(android.provider.AlarmClock.ACTION_SET_ALARM);
+    startActivity(alarm);
+}
+```
+- Lanjut, buka **AndroidManifest.xml** dan tambahkan code berikut untuk izin membuka Alarm
+```
+<uses-permission android:name="com.android.alarm.permission.SET_ALARM" />
+```
+Tambahkan code berikut didalam `<application` agar set alarm dapat berjalan:
+```
+    <activity
+        android:name=".MainActivity"
+        android:exported="true">
+        <intent-filter>
+            <action android:name="android.intent.action.SET_ALARM" />
+            <category android:name="android.intent.category.DEFAULT" />
+        </intent-filter>
+    </activity>
+```
+## FINISH
+Alhamdulillah telah seslasai :)<br>
+TERIMA KASIH
 
 
 
