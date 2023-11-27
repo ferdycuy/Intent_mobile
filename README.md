@@ -1,10 +1,10 @@
 # TUGAS PERTEMUAN 9
 <p>
-  <br>Nama    : Ferdyana Eka Prasetya</br>
-  <br>NIM     : 312210121</br>
-  <br>Kelas   : TI.22.A.1</br>
-  <br>Dosen   : Donny Maulana, S.Kom., M.M.S.I.</br>
-</p>
+  Nama    : Ferdyana Eka Prasetya</br>
+  NIM     : 312210121</br>
+  Kelas   : TI.22.A.1</br>
+  Dosen   : Donny Maulana, S.Kom., M.M.S.I.</br>
+
  ## Tugas 
   ![tugas 9 mobile](https://github.com/ferdycuy/Intent_mobile/assets/115714443/e1316f9f-b39e-41af-aa31-ea4408dd100d)
 
